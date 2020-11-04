@@ -15,13 +15,13 @@ const navSlide = () => {
       }
     });
 
-    burger.classList.toggle('toggle__nav-burger');
+    burger.classList.toggle('nav-burger__toggle');
   })
 }
 
 navSlide()
 
-
+// Scroll to top with jquery
 $(window).scroll(function() {
   if ($(this).scrollTop() > 50 ) {
       $('.scrolltop:hidden').stop(true, true).fadeIn();
@@ -30,3 +30,8 @@ $(window).scroll(function() {
   }
 });
 $(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$(".thetop").offset().top},"1000");return false})})
+
+
+function scrollToTop() {
+  window.scroll({top: 0, left: 0, behavior: 'smooth'});
+}
